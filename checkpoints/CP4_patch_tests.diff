@@ -1,0 +1,25 @@
+--- a/tests/pets.spec.js
++++ b/tests/pets.spec.js
+@@
+   test("PATCH /pets/:id happy path", async () => {
+     const create = await request(app).post("/pets").send({ name: "Buddy", tag: "dog" });
+     const id = create.body.id;
+-    // à implémenter
++    const res = await request(app).patch(`/pets/${id}`).send({ name: "B." });
++    expect(res.status).toBe(200);
++    expect(res.body.name).toBe("B.");
+   });
+ 
+   test("PATCH /pets/:id 404", async () => {
+-    // à implémenter
++    const res = await request(app).patch("/pets/99999").send({ name: "X" });
++    expect(res.status).toBe(404);
+   });
+ 
+   test("PATCH /pets/:id 400 invalid payload", async () => {
+-    // à implémenter
++    const create = await request(app).post("/pets").send({ name: "Tobi", tag: "dog" });
++    const id = create.body.id;
++    const res = await request(app).patch(`/pets/${id}`).send({ unknown: true });
++    expect(res.status).toBe(400);
+   });
