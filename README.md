@@ -1,7 +1,7 @@
 # PetStore Workflow — Node/Express + IA (Copilot Agent) + MCP
 
 ## Objectif
-Montrer un workflow de développement assisté par IA centré sur : harnais de tests, règles (`agent.md`), Git/PR/review, lecture d’issue via MCP, et qualité des prompts.
+Montrer un workflow de développement assisté par IA centré sur : harnais de tests, règles (`AGENS.md`), Git/PR/review, lecture d’issue via MCP, et qualité des prompts.
 
 ## Démarrage
 ```bash
@@ -22,4 +22,4 @@ Endpoints initiaux (partiels) :
 Prévoir Copilot Agent relié à GitHub. À défaut, copier le texte de l’issue dans le prompt.
 
 ## Évaluation (process)
-Tests, respect `agent.md`, discipline Git/PR, usage MCP (lecture issue), esprit critique dans la PR.
+Tests, respect `AGENTS.md`, discipline Git/PR, usage MCP (lecture issue), esprit critique dans la PR.
